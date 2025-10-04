@@ -9,6 +9,38 @@
     <title>Curriculum Vitae - Sebastián Bórquez</title>
 
     <style>
+
+        /* Modelo de caja */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Elementos flotantes */
+
+        .header-info {
+            overflow: auto;
+            padding: 20px;
+        }
+
+        header img {
+            float: left;
+            margin-right: 20px;
+            border-radius: 50%;
+            border: 3px solid var(--color3);
+        }
+
+        /* Variables*/
+
+        :root {
+            --color: rgb(53, 80, 112);
+            --color2: rgb(109, 89, 122);
+            --color3: rgb(229, 107, 111);
+            --color-fondo: #f4f6f9;
+            --color-fondo-seccion: white;
+            --color-texto: #333;
+        }
+
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f6f9;
@@ -18,12 +50,11 @@
 
         h1,
         h2 {
-            color: rgb(53, 80, 112);
-            text-align: center;
+            color: var(--color);
         }
 
         nav {
-            background-color: rgb(109, 89, 122);
+            background-color: var(--color2);
             padding: 10px;
             text-align: center;
         }
@@ -38,39 +69,35 @@
             text-decoration: underline;
         }
 
-        header img {
-            display: block;
-            margin: 10px auto;
-            border: 3px solid rgb(181, 101, 118);
-            border-radius: 10px;
+        /* Agrupacion de elementos*/
+
+        section {
+            background-color: var(--color-fondo-seccion);
+            margin: 20px;
+            padding: 20px;
+            border-left: 5px solid;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
 
+        /* height y overflow*/
+
         #biografia {
-            background-color: #ecf0f1;
-            padding: 15px;
-            margin: 20px;
-            border-left: 5px solid rgb(229, 107, 111);
+            border-color: var(--color3);
+            height: 100px;
+            overflow: scroll;
         }
 
         #experiencia {
-            background-color: #fafafa;
-            padding: 15px;
-            margin: 20px;
-            border-left: 5px solid rgb(234, 172, 139);
+            border-color: #e8a87c;
         }
 
         #educacion {
-            background-color: #fdfdfd;
-            padding: 15px;
-            margin: 20px;
-            border-left: 5px solid #8e44ad;
+            border-color: #8e44ad;
         }
 
         #idiomas {
-            background-color: #f7f7f7;
-            padding: 15px;
-            margin: 20px;
-            border-left: 5px solid #d35400;
+            border-color: #d35400;
         }
 
         .lista-simple {
@@ -94,12 +121,33 @@
         th {
             background-color: #bdc3c7;
         }
+
         footer {
             text-align: center;
             background-color: rgb(109, 89, 122);
             color: white;
             padding: 10px;
             margin-top: 20px;
+        }
+
+        /* pseudo clases y elementos */
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #biografia p::first-letter {
+            font-size: 2.5em;
+            color: var(--color);
+            float: left;
+            margin-right: 8px;
+            line-height: 1;
+        }
+
+        h2::before {
+            content: "★";
+            margin-right: 10px;
+            color: var(--color3);
         }
     </style>
 
@@ -120,6 +168,8 @@
         </nav>
 
         <h1>Sebastian Borquez Huerta</h1>
+
+        <div class="header-info"></div>
         <img src="sebasloco.png" alt="Foto de Sebastian" width="150">
         <p>
             Mi Correo: <a
@@ -127,6 +177,8 @@
                 target="_blank">sebastian.borquez252115@potros.itson.edu.mx</a><br>
             Mi perfil de GitHub: <a href="https://github.com/SEHUZ" target="_blank">SEHUZ</a>
         </p>
+
+        </div>
     </header>
 
 
